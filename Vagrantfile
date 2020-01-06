@@ -68,11 +68,13 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
   config.vm.provision "shell", inline: <<-SHELL
+    # Install Vim
     sudo apt-get remove --assume-yes vim-tiny
     sudo apt-get update
     sudo apt-get install --assume-yes vim
   SHELL
   config.vm.provision "shell", inline: <<-SHELL
+    # Install docker
     export DEBIAN_FRONTEND=noninteractive
     sudo apt-get -y update
     sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
@@ -86,6 +88,7 @@ Vagrant.configure("2") do |config|
     sudo usermod -aG docker vagrant
   SHELL
   config.vm.provision "shell", inline: <<-SHELL
+    # Install Ansible
     sudo apt-get install python -y
     sudo apt-get update
     sudo apt-get install software-properties-common

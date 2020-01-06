@@ -613,3 +613,7 @@ ubuntu-bionic login: [8038536822.488470] INFO: rcu_sched self-detected stall on 
 [8038537468.269868] Killed process 12097 (bundle) total-vm:818488kB, anon-rss:440920kB, file-rss:0kB, shmem-rss:180kB
 [8038537654.670413] Out of memory: Kill process 11784 (bundle) score 434 or sacrifice child
 [8038537654.677185] Killed process 11784 (bundle) total-vm:860456kB, anon-rss:436656kB, file-rss:0kB, shmem-rss:48kB
+[8038538393.065543] Out of memory: Kill process 12302 (bundle) score 406 or sacrifice child
+[8038538393.069154] Killed process 12302 (bundle) total-vm:836424kB, anon-rss:408252kB, file-rss:0kB, shmem-rss:44kB
+[8038538478.979527] Out of memory: Kill process 12712 (bundle) score 401 or sacrifice child
+[8038538478.982475] Killed process 12712 (bundle) total-vm:801828kB, anon-rss:403940kB, file-rss:0kB, shmem-rss:0kB
