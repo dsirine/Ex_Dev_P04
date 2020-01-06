@@ -104,4 +104,9 @@ Vagrant.configure("2") do |config|
     sudo bash /tmp/script.deb.sh
     sudo apt install gitlab-ce
   SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    # Install Pelican
+    sudo apt-get update -y
+    sudo apt-get install -y pelican
+  SHELL
 end
