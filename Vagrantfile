@@ -105,6 +105,7 @@ Vagrant.configure("2") do |config|
     curl -LO https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
     less /tmp/script.deb.sh
     sudo bash /tmp/script.deb.sh
+    export EXTERNAL_URL='http://192.168.1.99'
     sudo apt install gitlab-ce
   SHELL
   config.vm.provision "shell", inline: <<-SHELL
