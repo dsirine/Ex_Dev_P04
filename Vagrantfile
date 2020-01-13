@@ -108,6 +108,13 @@ Vagrant.configure("2") do |config|
     sudo EXTERNAL_URL="http://192.168.1.99:9100" apt-get install gitlab-ce
   SHELL
   config.vm.provision "shell", inline: <<-SHELL
+    # Install Gitlab-CI-Runners
+    curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh -o /tmp/gl-runner.deb.sh
+    less /tmp/gl-runner.deb.sh
+    sudo bash /tmp/gl-runner.deb.sh
+    sudo EXTERNAL_URL="http://192.168.1.99:9100" apt-get install gitlab-runner
+  SHELL
+  config.vm.provision "shell", inline: <<-SHELL
     # Install Pelican
     sudo apt-get update -y
     sudo apt-get install -y pelican
