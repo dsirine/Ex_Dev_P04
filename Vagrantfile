@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  config.vm.network "public_network", ip: "192.168.1.99"
+  config.vm.network "private_network", ip: "192.168.99.100"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -105,7 +105,7 @@ Vagrant.configure("2") do |config|
     curl -LO https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
     less /tmp/script.deb.sh
     sudo bash /tmp/script.deb.sh
-    sudo EXTERNAL_URL="http://192.168.1.99:9100" apt-get install gitlab-ce
+    sudo EXTERNAL_URL="http://192.168.99.100:9100" apt-get install gitlab-ce
   SHELL
   config.vm.provision "shell", inline: <<-SHELL
     # Install Gitlab-CI-Runners
